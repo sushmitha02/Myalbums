@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @picture_upload.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @picture_upload.description %>
+</p>
+
+<%= link_to 'Edit', edit_picture_upload_path(@picture_upload) %> |
+<%= link_to 'Back', picture_uploads_path %>

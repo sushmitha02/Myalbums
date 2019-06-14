@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :picture_uploads
   resources :albums
   devise_for :users
   get 'home/index'

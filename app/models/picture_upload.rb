@@ -1,0 +1,2 @@
+class PictureUpload < ApplicationRecord
+end
