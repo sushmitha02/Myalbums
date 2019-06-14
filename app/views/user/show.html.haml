@@ -1,0 +1,20 @@
+%h1
+ MyProfile
+ =link_to 'Edit', user_edit_path(current_user), class: 'pull-right btn btn-primary'
+
+%p
+ %label First Name
+ =@user.first_name
+
+%p
+ %label Last Name
+ =@user.last_name
+
+%p
+ %label Gender
+ =@user.gender
+
+%p
+ %label Date_of_birth
+ =@user.date_of_birth
+

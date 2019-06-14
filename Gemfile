@@ -11,6 +11,8 @@ gem 'sqlite3'
 gem 'puma', '~> 3.11'
 #authenticate
 gem 'devise'
+
+gem 'haml-rails'
 #styling
 gem 'twitter-bootstrap-rails'
 # Use SCSS for stylesheets

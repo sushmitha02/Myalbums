@@ -1,15 +1,26 @@
-Create a landing page
+1.create a profile page 
+- add fields to user model
+-->first_name: String
+-->last_name: String
+-->gender: Integer
+-->date_of_birth: date
 
- - create a controller and action and map root url to controller.
+2.Generate controller action for profile edit and show
 
-Implement the user profile
+3.Add a model address with the following fields
+-->Adress: String
+-->State: String
+-->City: String
+-->Pincode: Integer
 
- - email : string - must not be blank, uniq, format
- - first_name :string - must not be blank
- - last_name : string - must not be blank
- - gender : string - must select male or female
- - date of birth : integer - must not be blank, format
- - address : string - must not be blank, can include special characters(#)
- - pincode :integer - must not be blank, should be 6 digit numbers only
- - state : string - must not be blank
- - city : string - must not be blank
+4.Add validation of above fields
+Implementing Validation
+-Email (Type-String): must not be blank, uniq, format
+-First Name (Type-String): must not be blank
+-Last Name (Type-String): must not be blank
+-Gender : must be filled
+-Date of birth (Type-field): must not be blank, dd-mm--yyyy
+-Address (Type-text) : must not be blank
+-State (Type-field): must not be blank
+-Pincode(Type-field: must be 6 digit
+-City(Type-filed): must not be blank

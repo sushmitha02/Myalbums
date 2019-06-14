@@ -1,0 +1,24 @@
+%h1 Edit Profile
+= link_to 'Back', user_show_path(current_user), class: 'pull-right btn btn-primary'
+= form_for @user, url: '/user/update', html: { method: :put } do |f|
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .form-group
+    = f.label :gender
+    .field
+      = f.label :gender, for: 'user_gender_male', class: 'checkbox_inline' do
+        = f.radio_button :gender, :male
+        Male
+    .field
+      = f.label :gender, for: 'user_gender_female', class: 'checkbox_inline' do
+        = f.radio_button :gender, :female
+        Female
+  .field
+    = f.label :date_of_birth
+    = f.date_select :date_of_birth
+  .action
+    = f.submit 'save', class: 'btn btn-primary'
