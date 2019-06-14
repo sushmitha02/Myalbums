@@ -1,24 +1,15 @@
-# README
+Create a landing page
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ - create a controller and action and map root url to controller.
 
-Things you may want to cover:
+Implement the user profile
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - email : string - must not be blank, uniq, format
+ - first_name :string - must not be blank
+ - last_name : string - must not be blank
+ - gender : string - must select male or female
+ - date of birth : integer - must not be blank, format
+ - address : string - must not be blank, can include special characters(#)
+ - pincode :integer - must not be blank, should be 6 digit numbers only
+ - state : string - must not be blank
+ - city : string - must not be blank
