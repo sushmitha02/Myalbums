@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :albums
+  devise_for :users
   get 'home/index'
 
   root to: 'home#index'
