@@ -10,5 +10,5 @@ class User < ApplicationRecord
 
   enum gender: %i(male female)
 
-  accepts_nested_attributes_for :addresses, reject_if: proc { |attributes| attributes[''].blank? }, allow_destroy: true
+  accepts_nested_attributes_for :addresses, reject_if: proc { |attributes| attributes['address_line_1'].blank? }, allow_destroy: true
 end

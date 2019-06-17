@@ -10,7 +10,6 @@ class UserController < ApplicationController
 
   def update
   	@user = current_user
-    byebug
   	@user.update(user_params)
   	redirect_to user_show_path(@user)
   end
