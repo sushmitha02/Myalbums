@@ -8,7 +8,7 @@
 2.Generate controller action for profile edit and show
 
 3.Add a model address with the following fields
--->Adress: String
+-->address: String
 -->State: String
 -->City: String
 -->Pincode: Integer

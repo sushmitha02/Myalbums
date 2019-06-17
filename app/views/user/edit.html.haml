@@ -20,5 +20,31 @@
   .field
     = f.label :date_of_birth
     = f.date_select :date_of_birth
+  
+  = f.fields_for :addresses do |address_f|
+    %hr
+    = address_f.hidden_field :id, value: address_f.object&.id
+
+    .field
+      = address_f.label :address_line_1
+      = address_f.text_field :address_line_1
+
+    .field
+      = address_f.label :state
+      = address_f.text_field :state
+        
+    .field
+      = address_f.label :city
+      = address_f.text_field :city
+
+    .field
+      = address_f.label :pincode
+      = address_f.text_field :pincode
+
+    .field
+      = address_f.label :_destroy do
+        = address_f.check_box :_destroy
+        Destroy?
+
   .action
     = f.submit 'save', class: 'btn btn-primary'

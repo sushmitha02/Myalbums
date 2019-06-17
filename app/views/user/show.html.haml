@@ -1,20 +1,27 @@
 %h1
- MyProfile
- =link_to 'Edit', user_edit_path(current_user), class: 'pull-right btn btn-primary'
+  MyProfile
+  = link_to 'Edit', user_edit_path(current_user), class: 'pull-right btn btn-primary'
 
 %p
- %label First Name
- =@user.first_name
+  %label First Name
+  = @user.first_name
 
 %p
- %label Last Name
- =@user.last_name
+  %label Last Name
+  = @user.last_name
 
 %p
- %label Gender
- =@user.gender
+  %label Gender
+  = @user.gender
 
 %p
- %label Date_of_birth
- =@user.date_of_birth
+  %label Date_of_birth
+  = @user.date_of_birth
 
+%p
+  %label Address
+- @user.addresses.each do |address|
+  %p= address.address_line_1
+  %p= address.city
+  %p= address.state
+  %p= address.pincode

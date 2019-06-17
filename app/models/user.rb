@@ -6,5 +6,9 @@ class User < ApplicationRecord
 
   has_many :album
 
-  enum gender: %i(male, female)
+  has_many :addresses
+
+  enum gender: %i(male female)
+
+  accepts_nested_attributes_for :addresses, reject_if: proc { |attributes| attributes[''].blank? }, allow_destroy: true
 end
